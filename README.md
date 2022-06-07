@@ -14,8 +14,13 @@
   caso a imagem nginx não exista será baixada o host conseguirá acessar a porta do conteiner e o nome será meuconteiner.
 # docker exec -it meuconteiner bash
   executara o bash do meuconteiner. exec serve peara executar ações dentro do conteiner.
-
+# docker rm -f nginx
+  remove o conteiner o -f é para o caso de o conteiner está ativo.
 Copiar contetudo do conteiner para o host
 # sudo docker cp nginx:/usr/share/nginx/html/index.html .
 nginx é o nome do conteiner
 https://stackoverflow.com/questions/22049212/docker-copying-files-from-docker-container-to-host
+
+# docker run -d --name meuconteiner -p 80:80 -v ~/fullcycle/curso_docker/modul01/html/:/usr/share/nginx/html nginx
+# docker run -d --name nginx -p 80:80 --mount type=bind,source="$(pwd)"/html,target=/usr/share/nginx/html nginx
+ compartilhar arquivo local com o conteiner.
