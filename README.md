@@ -16,9 +16,10 @@
   executara o bash do meuconteiner. exec serve peara executar ações dentro do conteiner.
 # docker rm -f nginx
   remove o conteiner o -f é para o caso de o conteiner está ativo.
-Copiar contetudo do conteiner para o host
+# docker rm $(docker ps -aq) -f
+  remove todos os conteires por id inclusivo os ativos.
 # sudo docker cp nginx:/usr/share/nginx/html/index.html .
-nginx é o nome do conteiner
+Copiar contetudo do conteiner para o host, nginx é o nome do conteiner
 https://stackoverflow.com/questions/22049212/docker-copying-files-from-docker-container-to-host
 
 # docker run -d --name meuconteiner -p 80:80 -v ~/fullcycle/curso_docker/modul01/html/:/usr/share/nginx/html nginx
