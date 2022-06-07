@@ -17,7 +17,9 @@
 # docker rm -f nginx
   remove o conteiner o -f é para o caso de o conteiner está ativo.
 # docker rm $(docker ps -aq) -f
-  remove todos os conteires por id inclusivo os ativos.
+  remove todos os conteires por id inclusivo os ativos.  
+# docker rmi $(docker images -aq) 
+  remove todos images por id.  
 # sudo docker cp nginx:/usr/share/nginx/html/index.html .
 Copiar contetudo do conteiner para o host, nginx é o nome do conteiner
 https://stackoverflow.com/questions/22049212/docker-copying-files-from-docker-container-to-host
