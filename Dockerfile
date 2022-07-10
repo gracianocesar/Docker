@@ -1,9 +1,4 @@
 
-FROM nginx:latest
+FROM ubuntu:latest
 
-WORKDIR /app
-
-RUN apt-get update && \
-    apt-get install -y vim
-
-COPY html/ /usr/share/nginx/html
+CMD [ "echo", "Hello World" ]
