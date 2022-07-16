@@ -1,4 +1,6 @@
 # Docker Tutorial
+# sudo service --status-all 
+# sudo service docker start/stop
 # docker ps
   lista coteiners ativos
 # docker ps -a
