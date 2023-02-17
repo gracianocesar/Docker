@@ -5,6 +5,8 @@
   lista coteiners ativos
 # docker ps -a
   lista todos os conteineres
+# docker images
+  lista imagens
 # docker run hello-world
   caso a imagem docker não exista será baixada e executada.
 # docker run -it ubuntu bash
